@@ -8,6 +8,22 @@ export default () => {
         <Link
             asChild
             href={{
+                pathname: '/two', // No type issues here, but the route doesnt work
+            }}
+        >
+            <ThemedText style={style.back}>Go to two (broken route, no type issue)</ThemedText>
+        </Link>
+        <Link
+            asChild
+            href={{
+                pathname: '/nested/two'
+            }}
+        >
+            <ThemedText style={style.back}>Go to two</ThemedText>
+        </Link>
+        <Link
+            asChild
+            href={{
                 pathname: '../',
             }}
         >
